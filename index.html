@@ -3,77 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSupply - School Essentials</title>
+    <title>EduSupply - Quality School Products</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <!-- Header -->
+<body class="dark-theme">
     <header>
-        <div class="logo">EduSupply</div>
         <nav>
+            <div class="logo">EduSupply</div>
             <ul class="nav-links">
-                <li><a href="#products">Products</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button class="dark-mode-toggle">🌙</button></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="menu-toggle">☰</button>
         </nav>
     </header>
-
-    <!-- Hero Section -->
+    
     <section class="hero">
-        <h1>Premium School Supplies</h1>
-        <p>Get top-quality products for students & teachers.</p>
-        <a href="#products" class="cta-button">Shop Now</a>
+        <h1>Premium School Supplies for Every Student</h1>
+        <p>Explore high-quality stationery, backpacks, and tech gadgets.</p>
+        <a href="products.html" class="btn">Shop Now</a>
     </section>
 
-    <!-- Product Highlights -->
-    <section id="products">
-        <h2>Our Products</h2>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose EduSupply?</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <h3>High-Quality Products</h3>
+                <p>We provide top-tier, durable school supplies that stand the test of time.</p>
+            </div>
+            <div class="benefit">
+                <h3>Affordable Prices</h3>
+                <p>We ensure you get the best value for your money without compromising quality.</p>
+            </div>
+            <div class="benefit">
+                <h3>Fast & Reliable Shipping</h3>
+                <p>Get your school supplies delivered to your doorstep quickly and safely.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Expanded Products Section -->
+    <section class="products">
+        <h2>Our Featured Products</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="stationery.jpg" alt="Stationery">
+                <img src="stationery.jpeg" alt="Stationery">
                 <h3>Stationery</h3>
-                <p>Quality pens, notebooks, and more.</p>
-                <button>View More</button>
+                <p>Top-notch pens, notebooks, and art supplies.</p>
             </div>
             <div class="product-card">
                 <img src="backpacks.jpg" alt="Backpacks">
                 <h3>Backpacks</h3>
-                <p>Stylish and durable backpacks.</p>
-                <button>View More</button>
+                <p>Stylish and durable backpacks for students.</p>
             </div>
             <div class="product-card">
-                <img src="tech-gadgets.jpg" alt="Tech Gadgets">
+                <img src="tech1.jpeg" alt="Tech Gadgets">
                 <h3>Tech Gadgets</h3>
-                <p>Gadgets for learning & productivity.</p>
-                <button>View More</button>
+                <p>Essential electronic devices for learning.</p>
+            </div>
+            <div class="product-card">
+                <img src="lunchboxes.webp" alt="Lunchboxes">
+                <h3>Lunchboxes</h3>
+                <p>Keep your meals fresh with our stylish lunchboxes.</p>
+            </div>
+            <div class="product-card">
+                <img src="art-supplies.webp" alt="Art Supplies">
+                <h3>Art Supplies</h3>
+                <p>Paints, brushes, and sketchbooks for creativity.</p>
+            </div>
+            <div class="product-card">
+                <img src="sports.webp" alt="Sports Gear">
+                <h3>Sports Gear</h3>
+                <p>High-quality sports equipment for students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <h2>Latest News & Articles</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h3>Back-to-School Essentials</h3>
+                <p>Check out our must-have school supplies for a great start!</p>
+                <a href="blog.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h3>How to Stay Organized as a Student</h3>
+                <p>Learn tips on staying productive and organized throughout the year.</p>
+                <a href="blog.html">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h3>Best Budget-Friendly School Supplies</h3>
+                <p>Find out how to save money while getting the best quality products.</p>
+                <a href="blog.html">Read More</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials">
+    <section class="testimonials">
         <h2>What Our Customers Say</h2>
         <div class="testimonial-slider">
-            <p class="testimonial">"EduSupply is my go-to for school supplies!" - Sarah</p>
-            <p class="testimonial">"Affordable and great quality!" - James</p>
-            <p class="testimonial">"Fast delivery and great products!" - Priya</p>
+            <div class="testimonial">"EduSupply has the best products for students! Highly recommend."</div>
+            <div class="testimonial">"Top-notch quality and fast delivery! 10/10 experience."</div>
+            <div class="testimonial">"Great collection of school supplies at affordable prices!"</div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <footer id="contact">
-        <p>Contact Us: info@edusupply.com</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+    
+    <footer>
+        <p>&copy; 2025 EduSupply. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,102 +1,206 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-.dark-mode {
-    background: #222;
-    color: white;
 }
 
 /* Navigation */
-header {
+nav {
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
-    background: linear-gradient(to right, #0073e6, #0099ff);
-    color: white;
+    align-items: center;
+    padding: 15px 30px;
+    background: #1e1e1e;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00aaff;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center;
+    gap: 20px;
 }
+
 .nav-links li {
-    margin: 0 15px;
+    display: inline;
 }
-.nav-links a, .dark-mode-toggle {
-    color: white;
+
+.nav-links a {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
-.menu-toggle {
-    display: none;
-    font-size: 24px;
+
+.nav-links a:hover {
+    color: #00aaff;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 70px 20px;
-    background: url('hero-bg.jpg') center/cover;
-    color: white;
-    animation: fadeIn 1s ease-in-out;
-}
-.cta-button {
-    background: #ffcc00;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 
-/* Product Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
-.product-card {
-    padding: 15px;
-    border-radius: 10px;
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #00aaff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0088cc;
+}
+
+/* Products Section */
+.products {
     text-align: center;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    padding: 60px 20px;
 }
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Ensuring images resize properly within cards */
+.product-card img, 
+.blog-card img {
+    width: 100%;       /* Makes the image take the full width of the card */
+    height: 180px;     /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Smooth edges for a modern look */
+}
+
+
+.product-card h3 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #ccc;
+}
+
 .product-card:hover {
-    transform: scale(1.05);
+    background: #292929;
 }
 
 /* Testimonials */
-.testimonial-slider {
+.testimonials {
     text-align: center;
-    font-style: italic;
+    padding: 60px 20px;
+    background: #181818;
+}
+
+.testimonial {
+    font-size: 18px;
+    background: #222;
     padding: 20px;
-    font-size: 1.2rem;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 50%;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background: #222;
-    color: white;
+    padding: 20px;
+    background: #1e1e1e;
 }
 
-/* Dark Mode */
-.dark-mode .product-card {
-    background: #333;
+.social-links a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 10px;
 }
-.dark-mode .cta-button {
-    background: #ff9900;
+
+.social-links a:hover {
+    color: #0088cc;
+}
+/* Why Choose Us */
+.why-choose-us {
+    text-align: center;
+    padding: 60px 20px;
+    background: #181818;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.benefit {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.benefit h3 {
+    color: #00aaff;
+}
+
+/* Blog Section */
+.blog {
+    text-align: center;
+    padding: 60px 20px;
+    background: #222;
+}
+
+.blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.blog-card a {
+    color: #00aaff;
+    text-decoration: none;
 }
