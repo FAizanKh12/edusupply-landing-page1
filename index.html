@@ -5,55 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduSupply - School Essentials</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Navigation Bar -->
+    <!-- Header -->
     <header>
+        <div class="logo">EduSupply</div>
         <nav>
-            <h1>EduSupply</h1>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="dark-mode-toggle">🌙</button></li>
             </ul>
-            <button id="menu-toggle">☰</button>
+            <button class="menu-toggle">☰</button>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2>Quality School Supplies at the Best Prices</h2>
-        <p>Your one-stop shop for all educational essentials.</p>
-        <button>Shop Now</button>
+        <h1>Premium School Supplies</h1>
+        <p>Get top-quality products for students & teachers.</p>
+        <a href="#products" class="cta-button">Shop Now</a>
     </section>
 
     <!-- Product Highlights -->
-    <section class="products">
+    <section id="products">
         <h2>Our Products</h2>
-        <div class="grid">
+        <div class="product-grid">
             <div class="product-card">
                 <img src="stationery.jpg" alt="Stationery">
                 <h3>Stationery</h3>
-                <p>Pens, notebooks, and more.</p>
+                <p>Quality pens, notebooks, and more.</p>
+                <button>View More</button>
             </div>
             <div class="product-card">
-                <img src="backpack.jpg" alt="Backpacks">
+                <img src="backpacks.jpg" alt="Backpacks">
                 <h3>Backpacks</h3>
-                <p>Durable and stylish bags.</p>
+                <p>Stylish and durable backpacks.</p>
+                <button>View More</button>
             </div>
             <div class="product-card">
-                <img src="gadgets.jpg" alt="Tech Gadgets">
+                <img src="tech-gadgets.jpg" alt="Tech Gadgets">
                 <h3>Tech Gadgets</h3>
-                <p>Calculators, tablets, and more.</p>
+                <p>Gadgets for learning & productivity.</p>
+                <button>View More</button>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 EduSupply | Follow us on social media</p>
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <p class="testimonial">"EduSupply is my go-to for school supplies!" - Sarah</p>
+            <p class="testimonial">"Affordable and great quality!" - James</p>
+            <p class="testimonial">"Fast delivery and great products!" - Priya</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact">
+        <p>Contact Us: info@edusupply.com</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
 
     <script src="script.js"></script>

@@ -1,50 +1,102 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+    transition: background 0.3s ease, color 0.3s ease;
 }
-
-header {
-    background: #0073e6;
+.dark-mode {
+    background: #222;
     color: white;
-    padding: 15px;
 }
 
-nav ul {
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #0073e6, #0099ff);
+    color: white;
+}
+.nav-links {
     list-style: none;
-    padding: 0;
+    display: flex;
+    align-items: center;
 }
-
-nav ul li {
-    display: inline;
+.nav-links li {
     margin: 0 15px;
 }
-
-.hero {
-    background: #f4f4f4;
-    padding: 50px 20px;
+.nav-links a, .dark-mode-toggle {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.menu-toggle {
+    display: none;
+    font-size: 24px;
 }
 
-.products {
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: url('hero-bg.jpg') center/cover;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+.cta-button {
+    background: #ffcc00;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
-
-.grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
 .product-card {
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
     background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.05);
 }
 
+/* Testimonials */
+.testimonial-slider {
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Footer */
 footer {
-    background: #333;
+    text-align: center;
+    padding: 15px;
+    background: #222;
     color: white;
-    padding: 10px;
+}
+
+/* Dark Mode */
+.dark-mode .product-card {
+    background: #333;
+}
+.dark-mode .cta-button {
+    background: #ff9900;
 }
