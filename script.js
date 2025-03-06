@@ -1,18 +1,27 @@
-// Mobile Menu Toggle
-document.querySelector(".menu-toggle").addEventListener("click", function () {
-    document.querySelector(".nav-links").classList.toggle("show");
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const testimonialContainer = document.querySelector(".testimonial-container");
+    const testimonials = document.querySelectorAll(".testimonial-card");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    let index = 0;
+    const totalTestimonials = testimonials.length;
 
-// Simple Testimonial Slider
-let testimonials = document.querySelectorAll(".testimonial");
-let index = 0;
+    function showTestimonial(index) {
+        testimonialContainer.style.transform = `translateX(-${index * 100}%)`;
+    }
 
-function showTestimonial() {
-    testimonials.forEach((t, i) => {
-        t.style.display = i === index ? "block" : "none";
+    prevBtn.addEventListener("click", function () {
+        index = (index - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(index);
     });
-    index = (index + 1) % testimonials.length;
-}
 
-setInterval(showTestimonial, 3000);
-showTestimonial();
+    nextBtn.addEventListener("click", function () {
+        index = (index + 1) % totalTestimonials;
+        showTestimonial(index);
+    });
+
+    setInterval(() => {
+        index = (index + 1) % totalTestimonials;
+        showTestimonial(index);
+    }, 5000); // Auto-slide every 5 seconds
+});

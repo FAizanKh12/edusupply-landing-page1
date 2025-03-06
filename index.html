@@ -10,6 +10,7 @@
     <header>
         <nav>
             <div class="logo">EduSupply</div>
+            <button class="menu-toggle">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -26,7 +27,6 @@
         <a href="products.html" class="btn">Shop Now</a>
     </section>
 
-    <!-- Why Choose Us Section -->
     <section class="why-choose-us">
         <h2>Why Choose EduSupply?</h2>
         <div class="benefits">
@@ -45,7 +45,6 @@
         </div>
     </section>
     
-    <!-- Expanded Products Section -->
     <section class="products">
         <h2>Our Featured Products</h2>
         <div class="product-grid">
@@ -82,7 +81,6 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
     <section class="blog">
         <h2>Latest News & Articles</h2>
         <div class="blog-grid">
@@ -104,15 +102,39 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="testimonials">
         <h2>What Our Customers Say</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut eleifend libero.</p>
+    
         <div class="testimonial-slider">
-            <div class="testimonial">"EduSupply has the best products for students! Highly recommend."</div>
-            <div class="testimonial">"Top-notch quality and fast delivery! 10/10 experience."</div>
-            <div class="testimonial">"Great collection of school supplies at affordable prices!"</div>
+            <button class="testimonial-nav prev">&#10094;</button>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <img src="user1.jpg" alt="User">
+                    <p>"EduSupply provides the best school supplies. Highly recommended!"</p>
+                    <h3>Mike Torello</h3>
+                    <span>Executive Engineer</span>
+                </div>
+                <div class="testimonial-card">
+                    <img src="user2.jpg" alt="User">
+                    <p>"Great prices and top-quality products. Will definitely buy again!"</p>
+                    <h3>Rick Wright</h3>
+                    <span>Engineer</span>
+                </div>
+                <div class="testimonial-card">
+                    <img src="user3.jpg" alt="User">
+                    <p>"Amazing customer service and fast delivery. 10/10 experience!"</p>
+                    <h3>Devon Miles</h3>
+                    <span>Student</span>
+                </div>
+            </div>
+            <button class="testimonial-nav next">&#10095;</button>
         </div>
+    
+       
     </section>
+    
+    
     
     <footer>
         <p>&copy; 2025 EduSupply. All rights reserved.</p>
@@ -120,5 +142,28 @@
             <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile Menu Toggle
+            document.querySelector(".menu-toggle").addEventListener("click", function () {
+                document.querySelector(".nav-links").classList.toggle("show");
+            });
+
+            // Smooth Testimonial Slider
+            let index = 0;
+            const testimonials = document.querySelectorAll(".testimonial");
+
+            function showTestimonial() {
+                testimonials.forEach((t, i) => {
+                    t.style.opacity = i === index ? "1" : "0";
+                });
+                index = (index + 1) % testimonials.length;
+            }
+
+            setInterval(showTestimonial, 3000);
+            showTestimonial();
+        });
+    </script>
 </body>
 </html>
